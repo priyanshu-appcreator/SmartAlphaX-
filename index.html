@@ -1,0 +1,529 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>SmartAlphaX - Fun Educational App for Kids</title>  
+    <meta name="description" content="SmartAlphaX — Learning App - Interactive classes, quizzes, stories, audio pronunciation, and fun challenges for young learners!">  
+    <!-- Google Fonts -->  
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">  <style>  
+    :root {  
+        --primary: #1E293B;  
+        --accent-yellow: #FFD54F;  
+        --accent-orange: #FF9800;  
+        --accent-green: #4CAF50;  
+        --accent-blue: #2196F3;  
+        --accent-red: #FF5252;  
+        --bg-light: #F8FAFC;  
+        --card-bg: #FFFFFF;  
+        --text-dark: #0F172A;  
+        --text-muted: #64748B;  
+    }  
+
+    * {  
+        margin: 0;  
+        padding: 0;  
+        box-sizing: border-box;  
+        font-family: 'Plus Jakarta Sans', sans-serif;  
+    }  
+
+    body {  
+        background-color: var(--bg-light);  
+        color: var(--text-dark);  
+        line-height: 1.6;  
+        overflow-x: hidden;  
+    }  
+
+    h1, h2, h3, .brand-logo {  
+        font-family: 'Fredoka', cursive;  
+    }  
+
+    /* Navbar */  
+    nav {  
+        display: flex;  
+        justify-content: space-between;  
+        align-items: center;  
+        padding: 1.5rem 8%;  
+        background: rgba(255, 255, 255, 0.9);  
+        backdrop-filter: blur(10px);  
+        position: sticky;  
+        top: 0;  
+        z-index: 1000;  
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);  
+    }  
+
+    .brand-logo {  
+        font-size: 1.8rem;  
+        font-weight: 700;  
+        color: var(--primary);  
+        display: flex;  
+        align-items: center;  
+        gap: 10px;  
+        text-decoration: none;  
+    }  
+
+    .brand-logo span {  
+        color: var(--accent-orange);  
+    }  
+
+    .nav-links {  
+        display: flex;  
+        gap: 2rem;  
+        align-items: center;  
+        list-style: none;  
+    }  
+
+    .nav-links a {  
+        text-decoration: none;  
+        color: var(--text-dark);  
+        font-weight: 600;  
+        transition: color 0.3s;  
+    }  
+
+    .nav-links a:hover {  
+        color: var(--accent-blue);  
+    }  
+
+    .btn-download {  
+        background: linear-gradient(135deg, var(--accent-orange), var(--accent-yellow));  
+        color: #000;  
+        padding: 0.75rem 1.8rem;  
+        border-radius: 50px;  
+        font-weight: 700;  
+        text-decoration: none;  
+        box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);  
+        transition: transform 0.2s, box-shadow 0.2s;  
+    }  
+
+    .btn-download:hover {  
+        transform: translateY(-2px);  
+        box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);  
+    }  
+
+    /* Hero Section */  
+    .hero {  
+        display: flex;  
+        align-items: center;  
+        justify-content: space-between;  
+        padding: 5rem 8%;  
+        gap: 4rem;  
+        background: linear-gradient(180deg, #FFFFFF 0%, var(--bg-light) 100%);  
+    }  
+
+    .hero-content {  
+        flex: 1;  
+    }  
+
+    .badge {  
+        display: inline-block;  
+        background-color: #E0F2FE;  
+        color: #0369A1;  
+        padding: 0.4rem 1rem;  
+        border-radius: 50px;  
+        font-size: 0.9rem;  
+        font-weight: 700;  
+        margin-bottom: 1.5rem;  
+    }  
+
+    .hero-content h1 {  
+        font-size: 3.5rem;  
+        line-height: 1.2;  
+        color: var(--primary);  
+        margin-bottom: 1.2rem;  
+    }  
+
+    .hero-content p {  
+        font-size: 1.2rem;  
+        color: var(--text-muted);  
+        margin-bottom: 2rem;  
+        max-width: 540px;  
+    }  
+
+    .cta-buttons {  
+        display: flex;  
+        gap: 1.2rem;  
+        align-items: center;  
+        flex-wrap: wrap;  
+    }  
+
+    .btn-playstore {  
+        background-color: #000000;  
+        color: #FFFFFF;  
+        padding: 0.8rem 1.8rem;  
+        border-radius: 14px;  
+        font-weight: 700;  
+        text-decoration: none;  
+        display: inline-flex;  
+        align-items: center;  
+        gap: 12px;  
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);  
+        transition: transform 0.2s, background-color 0.2s;  
+    }  
+
+    .btn-playstore:hover {  
+        transform: translateY(-2px);  
+        background-color: #1E293B;  
+    }  
+
+    .btn-playstore img {  
+        width: 28px;  
+        height: 28px;  
+    }  
+
+    .btn-playstore-text {  
+        display: flex;  
+        flex-direction: column;  
+        text-align: left;  
+        line-height: 1.1;  
+    }  
+
+    .btn-playstore-text span {  
+        font-size: 0.75rem;  
+        font-weight: 400;  
+        text-transform: uppercase;  
+        color: #A1A1AA;  
+    }  
+
+    .btn-playstore-text strong {  
+        font-size: 1.1rem;  
+        font-weight: 700;  
+    }  
+
+    .btn-secondary {  
+        border: 2px solid #E2E8F0;  
+        color: var(--text-dark);  
+        padding: 0.9rem 1.8rem;  
+        border-radius: 14px;  
+        font-weight: 700;  
+        text-decoration: none;  
+        transition: background 0.3s;  
+    }  
+
+    .btn-secondary:hover {  
+        background-color: #F1F5F9;  
+    }  
+
+    .hero-image {  
+        flex: 1;  
+        display: flex;  
+        justify-content: center;  
+    }  
+
+    .app-mockup {  
+        width: 320px;  
+        height: 620px;  
+        background: var(--primary);  
+        border-radius: 40px;  
+        border: 12px solid #334155;  
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);  
+        display: flex;  
+        flex-direction: column;  
+        align-items: center;  
+        justify-content: center;  
+        color: #FFF;  
+        text-align: center;  
+        padding: 2rem;  
+        position: relative;  
+        overflow: hidden;  
+    }  
+
+    .app-mockup::before {  
+        content: '';  
+        position: absolute;  
+        top: 15px;  
+        width: 120px;  
+        height: 20px;  
+        background: #334155;  
+        border-radius: 10px;  
+    }  
+
+    /* Features Section */  
+    .features {  
+        padding: 6rem 8%;  
+        background: #FFFFFF;  
+        text-align: center;  
+    }  
+
+    .section-title {  
+        font-size: 2.5rem;  
+        color: var(--primary);  
+        margin-bottom: 0.8rem;  
+    }  
+
+    .section-subtitle {  
+        font-size: 1.1rem;  
+        color: var(--text-muted);  
+        margin-bottom: 4rem;  
+    }  
+
+    .features-grid {  
+        display: grid;  
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  
+        gap: 2.5rem;  
+    }  
+
+    .feature-card {  
+        background: var(--bg-light);  
+        padding: 2.5rem 2rem;  
+        border-radius: 24px;  
+        text-align: left;  
+        transition: transform 0.3s, box-shadow 0.3s;  
+        border: 1px solid #E2E8F0;  
+    }  
+
+    .feature-card:hover {  
+        transform: translateY(-5px);  
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);  
+    }  
+
+    .icon-box {  
+        width: 60px;  
+        height: 60px;  
+        border-radius: 18px;  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        font-size: 1.8rem;  
+        margin-bottom: 1.5rem;  
+    }  
+
+    .icon-1 { background-color: #FEF3C7; }  
+    .icon-2 { background-color: #DCFCE7; }  
+    .icon-3 { background-color: #E0F2FE; }  
+    .icon-4 { background-color: #FCE7F3; }  
+
+    .feature-card h3 {  
+        font-size: 1.4rem;  
+        color: var(--primary);  
+        margin-bottom: 0.8rem;  
+    }  
+
+    .feature-card p {  
+        color: var(--text-muted);  
+        font-size: 1rem;  
+    }  
+
+    /* Safety Banner */  
+    .safety-banner {  
+        margin: 4rem 8%;  
+        background: linear-gradient(135deg, #1E293B, #0F172A);  
+        color: #FFF;  
+        padding: 4rem;  
+        border-radius: 32px;  
+        display: flex;  
+        align-items: center;  
+        justify-content: space-between;  
+        gap: 2rem;  
+    }  
+
+    .safety-content h2 {  
+        font-size: 2.2rem;  
+        margin-bottom: 1rem;  
+        color: var(--accent-yellow);  
+    }  
+
+    .safety-content p {  
+        font-size: 1.1rem;  
+        color: #94A3B8;  
+        max-width: 600px;  
+    }  
+
+    /* Footer */  
+    footer {  
+        background: #0F172A;  
+        color: #94A3B8;  
+        padding: 4rem 8% 2rem 8%;  
+    }  
+
+    .footer-content {  
+        display: flex;  
+        justify-content: space-between;  
+        flex-wrap: wrap;  
+        gap: 2rem;  
+        padding-bottom: 3rem;  
+        border-bottom: 1px solid #334155;  
+    }  
+
+    .footer-brand h3 {  
+        color: #FFF;  
+        font-size: 1.8rem;  
+        margin-bottom: 0.8rem;  
+    }  
+
+    .footer-links h4 {  
+        color: #FFF;  
+        margin-bottom: 1.2rem;  
+    }  
+
+    .footer-links ul {  
+        list-style: none;  
+    }  
+
+    .footer-links li {  
+        margin-bottom: 0.8rem;  
+    }  
+
+    .footer-links a {  
+        color: #94A3B8;  
+        text-decoration: none;  
+        transition: color 0.3s;  
+    }  
+
+    .footer-links a:hover {  
+        color: var(--accent-yellow);  
+    }  
+
+    .footer-bottom {  
+        text-align: center;  
+        padding-top: 2rem;  
+        font-size: 0.9rem;  
+    }  
+
+    /* Responsive Design */  
+    @media (max-width: 968px) {  
+        .hero {  
+            flex-direction: column;  
+            text-align: center;  
+        }  
+
+        .hero-content p {  
+            margin: 0 auto 2rem auto;  
+        }  
+
+        .cta-buttons {  
+            justify-content: center;  
+        }  
+
+        .safety-banner {  
+            flex-direction: column;  
+            text-align: center;  
+            padding: 2.5rem 1.5rem;  
+        }  
+
+        .nav-links {  
+            display: none;  
+        }  
+    }  
+</style>
+
+</head>  
+<body>  <!-- Navigation Header -->  
+<nav>  
+    <a href="#" class="brand-logo">  
+        🎓 SmartAlphaX<span>  
+    </a>  
+    <ul class="nav-links">  
+        <li><a href="#features">Features</a></li>  
+        <li><a href="#safety">Parent Safety</a></li>  
+        <li><a href="https://privacypolicy01.carrd.co" target="_blank">Privacy Policy</a></li>  
+    </ul>  
+    <a href="https://play.google.com/store/apps/details?id=com.my.smart" target="_blank" class="btn-download">Get App 🚀</a>  
+</nav>  
+
+<!-- Hero Section -->  
+<section class="hero">  
+    <div class="hero-content">  
+        <span class="badge">✨ 100% Free & Family Safe</span>  
+        <h1>Interactive Learning & Fun Quizzes for Kids!</h1>  
+        <p>Empower your child with interactive lessons, bilingual audio pronunciation, daily quizzes, engaging stories, and exciting leaderboard rewards.</p>  
+        <div class="cta-buttons">  
+            <!-- Google Play Store Button -->  
+            <a href="https://play.google.com/store/apps/details?id=com.my.smart" target="_blank" class="btn-playstore">  
+                <svg width="24" height="24" viewBox="0 0 512 512" fill="currentColor">  
+                    <path d="M99.617 8.057a50.091 50.091 0 0 0-38.867 18.24L261.2 256.71 461.65 56.26C429.6 25.75 382.72 8 332.8 8c-80.64 0-155.84 0-233.183.057zM24.783 50.157A49.882 49.882 0 0 0 8 85.333v341.334c0 13.568 5.376 26.517 14.88 36.032l209.739-209.74L24.783 50.157zM290.005 285.515l-48.405-48.405L31.86 446.85c21.2 16.3 48.06 25.15 76.8 25.15h224.14c46.08 0 89.6-15.36 120.32-41.98l-163.115-144.505zM482.901 84.139L298.667 268.373l184.234 184.234c13.44-20.48 21.1-44.8 21.1-71.273V130.667c0-16.64-3.84-32.533-11.1-46.528z"/>  
+                </svg>  
+                <div class="btn-playstore-text">  
+                    <span>Get it on</span>  
+                    <strong>Google Play</strong>  
+                </div>  
+            </a>  
+
+            <!-- Privacy Policy Button -->  
+            <a href="https://privacypolicy01.carrd.co" target="_blank" class="btn-secondary">  
+                🔒 Privacy Policy  
+            </a>  
+        </div>  
+    </div>  
+    <div class="hero-image">  
+        <div class="app-mockup">  
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🏆</div>  
+            <h2 style="font-size: 1.8rem; color: #FFD54F;">Super League</h2>  
+            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #CBD5E1;">Learn, compete with friends, and earn stars!</p>  
+        </div>  
+    </div>  
+</section>  
+
+<!-- App Features Section -->  
+<section class="features" id="features">  
+    <h2 class="section-title">Designed for Young Minds 🧠</h2>  
+    <p class="section-subtitle">Everything your child needs to learn and excel effortlessly.</p>  
+
+    <div class="features-grid">  
+        <div class="feature-card">  
+            <div class="icon-box icon-1">📚</div>  
+            <h3>Structured Classes</h3>  
+            <p>Comprehensive curriculum coverage from primary through school chapters with easy explanations.</p>  
+        </div>  
+        <div class="feature-card">  
+            <div class="icon-box icon-2">🗣️</div>  
+            <h3>Bilingual Audio</h3>  
+            <p>Clear audio pronunciations in both English and Hindi for enhanced language comprehension.</p>  
+        </div>  
+        <div class="feature-card">  
+            <div class="icon-box icon-3">🎯</div>  
+            <h3>Daily Quizzes</h3>  
+            <p>Interactive multiple-choice quizzes that make testing knowledge fun and rewarding.</p>  
+        </div>  
+        <div class="feature-card">  
+            <div class="icon-box icon-4">🏆</div>  
+            <h3>Leaderboard & Badges</h3>  
+            <p>Earn XP, unlock achievement trophies, and climb the Super League leaderboard!</p>  
+        </div>  
+    </div>  
+</section>  
+
+<!-- Child Safety & Privacy Banner -->  
+<section class="safety-banner" id="safety">  
+    <div class="safety-content">  
+        <h2>Parent Approved & Privacy First 🛡️</h2>  
+        <p>SmartAlphaX is built strictly with children's safety in mind. We enforce child-directed privacy guidelines, zero behavioral profiling, and safe ad content rules.</p>  
+    </div>  
+    <div>  
+        <a href="https://privacypolicy01.carrd.co" target="_blank" class="btn-download" style="background: #FFF; color: var(--primary);">  
+            Read Privacy Policy 📜  
+        </a>  
+    </div>  
+</section>  
+
+<!-- Footer -->  
+<footer>  
+    <div class="footer-content">  
+        <div class="footer-brand">  
+            <h3>SmartAlphaX — Learning App</h3>  
+            <p>Empowering children through safe, fun, and interactive education.</p>  
+        </div>  
+        <div class="footer-links">  
+            <h4>Quick Links</h4>  
+            <ul>  
+                <li><a href="https://play.google.com/store/apps/details?id=com.my.smart" target="_blank">Download App</a></li>  
+                <li><a href="#features">App Features</a></li>  
+                <li><a href="#safety">Safety Guidelines</a></li>  
+                <li><a href="https://privacypolicy01.carrd.co" target="_blank">Privacy Policy</a></li>  
+            </ul>  
+        </div>  
+        <div class="footer-links">  
+            <h4>Legal & Contact</h4>  
+            <ul>  
+                <li><a href="https://privacypolicy01.carrd.co" target="_blank">Privacy Policy Statement</a></li>  
+                <li><p style="color: #64748B;">Contact: android7392@protonmail.com</p></li>  
+            </ul>  
+        </div>  
+    </div>  
+    <div class="footer-bottom">  
+        <p>&copy; 2026 Smart Kids Learning App. All rights reserved.</p>  
+    </div>  
+</footer>
+
+</body>  
+</html> 
