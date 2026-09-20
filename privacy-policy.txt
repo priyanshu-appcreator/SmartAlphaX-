@@ -1,0 +1,230 @@
+Privacy Policy
+
+Effective Date: September 20, 2026
+Last Updated: September 20, 2026
+
+Application Name: SmartAlphaX — Learning App
+Package Name: "com.my.smart"
+Developer: Priyanshu Raj
+Support Email: android7392@protonmail.com
+Country: India
+
+1. Introduction
+
+SmartAlphaX — Learning App ("SmartAlphaX", "we", "our", or "us") is an educational Android application designed specifically for children and families.
+
+This Privacy Policy explains what information SmartAlphaX may collect, how that information is used, where it may be stored, and the choices available to parents and guardians.
+
+We aim to collect only information reasonably necessary to provide, maintain, secure, and improve the educational features of the application.
+
+Because SmartAlphaX is directed to children, we take children's privacy seriously and intend to follow applicable children's privacy requirements, Google Play Families policies, and applicable Indian data-protection requirements.
+
+2. Information We May Collect
+
+Depending on the features used, SmartAlphaX may collect or process the following information:
+
+Account Information
+
+- Name
+- Email address
+- Phone number, if voluntarily provided as part of the user's profile or account information
+- Profile photo, if voluntarily provided
+- Class or grade
+
+Learning Information
+
+- Quiz results
+- Learning progress
+- Achievements
+- Educational statistics
+- Game or activity progress
+
+This information is used to provide learning features, save progress, and improve the user's experience.
+
+Technical and Diagnostic Information
+
+The application and its service providers may process limited technical information needed to operate and secure the application, such as device-related information and technical/error information.
+
+We do not intentionally collect precise location information.
+
+We do not intentionally collect or transmit the Android Advertising ID from child users.
+
+3. Children's Privacy and Parental Involvement
+
+SmartAlphaX is designed specifically for children under 13.
+
+Where applicable law requires verifiable parental or guardian consent before processing a child's personal data, we will obtain or require such consent in an appropriate manner.
+
+Parents and legal guardians may contact us at:
+
+android7392@protonmail.com
+
+Parents may contact us to:
+
+- Ask what personal information associated with their child may have been collected;
+- Request correction of inaccurate information;
+- Request deletion of their child's account or personal information;
+- Ask questions about our privacy practices.
+
+4. Firebase Services
+
+SmartAlphaX uses Firebase services provided by Google, including:
+
+Firebase Authentication
+
+Firebase Authentication is used to provide account authentication through email and password.
+
+Firebase Realtime Database
+
+The Realtime Database may store information necessary for application functionality, such as profiles, learning progress, quiz information, achievements, and related educational data.
+
+Firebase Analytics
+
+Firebase Analytics may be used to understand general application usage and improve application functionality.
+
+Because SmartAlphaX is directed to children, Firebase and other SDK configurations must be configured and used in accordance with applicable children's privacy requirements and Google Play Families policies.
+
+5. Advertising
+
+SmartAlphaX uses Google AdMob for advertising.
+
+The application may display:
+
+- Banner advertisements
+- Interstitial advertisements
+- Rewarded advertisements
+
+Because SmartAlphaX is directed to children, advertising must be configured for child-directed treatment and must comply with Google Play Families advertising requirements.
+
+We do not intend to use personalized or interest-based advertising for children.
+
+Advertisements shown to children should be age-appropriate and must not contain inappropriate adult, gambling, tobacco, alcohol, sexually suggestive, or otherwise unsuitable content.
+
+Advertising SDKs and configurations used in the application must comply with applicable Google Play Families requirements.
+
+6. Information We Do Not Intentionally Collect
+
+SmartAlphaX does not intentionally collect or transmit:
+
+- Precise GPS location
+- Android Advertising ID from child users
+- IMEI
+- IMSI
+- SIM serial number
+- MAC address
+- BSSID
+- SSID
+- Build serial number
+
+We do not use the application to track children's physical location.
+
+7. Educational Videos
+
+SmartAlphaX may provide educational video content through YouTube or other video services.
+
+When external video services are used, those services may process information according to their own privacy policies and terms.
+
+Parents and guardians should review the privacy practices of external services used through the application.
+
+8. Text-to-Speech and Audio
+
+SmartAlphaX may provide pronunciation and educational audio features using text-to-speech technology.
+
+Text used for pronunciation is processed only as necessary to provide the requested educational functionality.
+
+9. How We Use Information
+
+Information may be used to:
+
+- Create and manage user accounts;
+- Authenticate users;
+- Save educational progress;
+- Provide quizzes and games;
+- Record quiz results and achievements;
+- Provide educational content;
+- Maintain application security;
+- Diagnose technical problems;
+- Improve application performance and functionality;
+- Provide appropriate advertising where permitted.
+
+We do not sell children's personal information.
+
+We do not use children's information for targeted behavioral advertising.
+
+10. Data Sharing
+
+We may share or transmit information with service providers necessary to operate SmartAlphaX, including Google services such as Firebase and AdMob.
+
+We do not sell personal information.
+
+We do not intentionally share children's personal information with unrelated third parties for their own marketing purposes.
+
+Third-party services may process information according to their own privacy policies and applicable requirements.
+
+11. Data Security
+
+We use reasonable technical and organizational measures intended to protect information against unauthorized access, loss, misuse, alteration, or disclosure.
+
+However, no internet transmission or electronic storage system can be guaranteed to be completely secure.
+
+12. Data Retention and Deletion
+
+Account and educational information may be retained while it is necessary to provide the application's services.
+
+Parents or guardians may request account and associated personal-data deletion by contacting:
+
+android7392@protonmail.com
+
+Deletion requests will be reviewed and processed in accordance with applicable law and our technical capabilities.
+
+Certain information may be retained where retention is required by law, necessary for security, fraud prevention, dispute resolution, or legitimate technical purposes.
+
+13. Parents' and Guardians' Rights
+
+Parents and guardians may contact us regarding their child's information and may request, where applicable:
+
+- Access to personal information;
+- Correction of inaccurate information;
+- Deletion of personal information;
+- Withdrawal of consent where applicable;
+- Information about how their child's information is processed.
+
+Requests should be sent to:
+
+android7392@protonmail.com
+
+We may request sufficient information to verify that a request is being made by the child's parent or lawful guardian before providing or deleting information.
+
+14. International Services
+
+Some service providers used by SmartAlphaX, including Google services, may process information on servers located outside India.
+
+Where applicable, such processing will be subject to the service provider's privacy practices and applicable legal requirements.
+
+15. Legal Compliance
+
+SmartAlphaX is intended to comply with applicable privacy and children's data-protection requirements, including applicable requirements under Indian data-protection law and Google Play's Families policies.
+
+We may update our privacy and data practices when applicable laws, platform requirements, or application functionality change.
+
+16. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time.
+
+When we make material changes, we will update the "Last Updated" date at the top of this policy and, where appropriate, provide additional notice.
+
+17. Contact Us
+
+If you have questions, concerns, parental requests, or requests regarding a child's personal information, contact:
+
+Priyanshu Raj
+SmartAlphaX — Learning App
+Email: android7392@protonmail.com
+Country: India
+
+Parents and guardians may use this email to request access, correction, or deletion of their child's information.
+
+---
+
+Privacy Policy Version: 1.0
+Effective Date: September 20, 2026
