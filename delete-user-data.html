@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Official Account and User Data Deletion Instructions for SmartAlphaX — Learning App (com.my.smart). Compliant with Google Play Data Safety policy and DPDP Act 2023.">
+  <title>Delete User Data & Account — SmartAlphaX</title>
+  <style>
+    :root {
+      --primary: #1A237E;
+      --primary-light: #3949AB;
+      --secondary: #00B0FF;
+      --danger: #D32F2F;
+      --danger-bg: #FFEBEE;
+      --success: #2E7D32;
+      --success-bg: #E8F5E9;
+      --text-main: #1C1B1F;
+      --text-muted: #5A6065;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --border: #E2E8F0;
+      --shadow: 0 6px 24px rgba(26, 35, 126, 0.08);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Navigation */
+    nav.navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #B71C1C 0%, #D32F2F 60%, #C2185B 100%);
+      color: #FFFFFF;
+      padding: 56px 20px 48px;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    .header-sub {
+      font-size: 16px;
+      opacity: 0.94;
+      max-width: 680px;
+      margin: 0 auto 16px;
+      line-height: 1.5;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 860px;
+      margin: -24px auto 60px;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text-main);
+    }
+
+    /* Steps Box */
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      padding: 18px;
+      border-radius: 12px;
+    }
+
+    .step-num {
+      width: 34px;
+      height: 34px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 15px;
+    }
+
+    .step-text h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .step-text p {
+      margin-bottom: 0;
+      font-size: 14.5px;
+      color: var(--text-muted);
+    }
+
+    /* Data Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14.5px;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background-color: #F1F5F9;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .tag-deleted {
+      background: var(--danger-bg);
+      color: var(--danger);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 15px;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-danger {
+      background: var(--danger);
+      color: #FFFFFF;
+    }
+
+    .btn-danger:hover {
+      background: #B71C1C;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: #E2E8F0;
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background: #CBD5E1;
+    }
+
+    /* Pre-filled email box */
+    .template-box {
+      background: #F1F5F9;
+      border-left: 4px solid var(--danger);
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      font-family: monospace;
+      font-size: 13.5px;
+      margin: 16px 0;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    /* Footer */
+    footer {
+      background: #0D144A;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 40px 20px 24px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 26px; }
+      .card { padding: 22px 18px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <span>🌟</span> SmartAlphaX
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="https://play.google.com/store/apps/details?id=com.my.smart" target="_blank">Google Play</a>
+      <a href="mailto:android7392@protonmail.com">Support</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="badge-pill">
+      <span>🛡️</span> GOOGLE PLAY DATA SAFETY & DPDP ACT 2023
+    </div>
+    <h1>Account & User Data Deletion Request</h1>
+    <p class="header-sub">
+      SmartAlphaX empowers parents and users with complete control over their digital footprint. Follow the steps below to instantly delete your child's data and cloud account.
+    </p>
+  </header>
+
+  <!-- Content Container -->
+  <div class="container">
+
+    <!-- Overview Card -->
+    <div class="card">
+      <h2><span>📋</span> Application Overview</h2>
+      <table>
+        <tr>
+          <th>Application Name</th>
+          <td><strong>SmartAlphaX — Learning App</strong></td>
+        </tr>
+        <tr>
+          <th>Package Name / App ID</th>
+          <td><code>com.my.smart</code></td>
+        </tr>
+        <tr>
+          <th>Developer / Data Fiduciary</th>
+          <td><strong>Priyanshu Raj</strong></td>
+        </tr>
+        <tr>
+          <th>Support & Grievance Email</th>
+          <td><a href="mailto:android7392@protonmail.com">android7392@protonmail.com</a></td>
+        </tr>
+        <tr>
+          <th>Official Play Store Listing</th>
+          <td><a href="https://play.google.com/store/apps/details?id=com.my.smart" target="_blank">View on Google Play Store ↗</a></td>
+        </tr>
+        <tr>
+          <th>Statutory Compliance</th>
+          <td>India DPDP Act 2023, Google Play Families Policy, COPPA</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Method 1: Instant In-App Deletion -->
+    <div class="card">
+      <h2><span>⚡</span> Method 1: Instant In-App Deletion (Recommended)</h2>
+      <p>
+        Parents can immediately delete all account information, learning progress, and cloud database records from inside the app without waiting:
+      </p>
+
+      <div class="steps-container">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <h4>Open SmartAlphaX on your Android device</h4>
+            <p>Launch the app and open the Navigation Drawer or tap the <strong>Settings</strong> gear icon.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <h4>Pass the Parent Gate</h4>
+            <p>Solve the quick parental arithmetic challenge designed to prevent accidental child actions.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <h4>Navigate to Account / Data Management</h4>
+            <p>Scroll to the <strong>Danger Zone</strong> section in Settings or Profile.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-text">
+            <h4>Tap "Delete User Data & Account"</h4>
+            <p>Confirm the deletion prompt. Your Firebase account, Realtime Database records, stars, coins, and local SQLite data are permanently erased in real time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Method 2: Manual Request by Email -->
+    <div class="card">
+      <h2><span>✉️</span> Method 2: Email Deletion Request (Grievance Officer)</h2>
+      <p>
+        If you have uninstalled the application or cannot access your device, you may submit a manual deletion request directly to our developer:
+      </p>
+
+      <div class="template-box">To: android7392@protonmail.com
+Subject: Account Deletion Request - SmartAlphaX (com.my.smart)
+
+Dear Developer / Grievance Officer Priyanshu Raj,
+
+I request the permanent deletion of my account and all associated child learning data for:
+- App: SmartAlphaX (com.my.smart)
+- Registered Email / User ID: [Insert your registered email or Google Account ID here]
+
+Please confirm once all data has been permanently deleted from Firebase and servers.
+
+Thank you,
+[Parent / Guardian Name]</div>
+
+      <div style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="mailto:android7392@protonmail.com?subject=Account%20Deletion%20Request%20-%20SmartAlphaX%20(com.my.smart)&body=Dear%20Developer%20Priyanshu%20Raj%2C%0A%0APlease%20permanently%20delete%20my%20account%20and%20all%20associated%20child%20learning%20data%20for%20SmartAlphaX%20(com.my.smart).%0A%0ARegistered%20Email%20%2F%20User%20ID%3A%20%0A%0AThank%20you." class="btn btn-danger">
+          <span>📬</span> Send Pre-filled Deletion Email
+        </a>
+        <a href="https://priyanshu-appcreator.github.io/AlphaLearnX/privacy-policy.html" class="btn btn-secondary">
+          <span>🛡️</span> Read Privacy Policy
+        </a>
+      </div>
+    </div>
+
+    <!-- What Data is Deleted -->
+    <div class="card">
+      <h2><span>🗑️</span> Types of Data Deleted vs Retained</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Category</th>
+            <th>Specific Items</th>
+            <th>Status Upon Request</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Authentication</strong></td>
+            <td>Firebase Auth UID, registered email address, authentication tokens</td>
+            <td><span class="tag-deleted">PERMANENTLY DELETED</span></td>
+          </tr>
+          <tr>
+            <td><strong>Progress & Gamification</strong></td>
+            <td>Stars, coins, quiz scores, speed-math records, alphabet milestones</td>
+            <td><span class="tag-deleted">PERMANENTLY DELETED</span></td>
+          </tr>
+          <tr>
+            <td><strong>Child Profiles</strong></td>
+            <td>Local avatar selection, nickname, grade level preferences</td>
+            <td><span class="tag-deleted">PERMANENTLY DELETED</span></td>
+          </tr>
+          <tr>
+            <td><strong>Local Storage</strong></td>
+            <td>Room SQLite database, SharedPreferences, cached drawings</td>
+            <td><span class="tag-deleted">CLEARED IMMEDIATELY</span></td>
+          </tr>
+          <tr>
+            <td><strong>Advertising / Trackers</strong></td>
+            <td>Zero personal trackers (AdMob operates in non-personalized COPPA mode)</td>
+            <td><span class="tag-deleted">N/A (NEVER COLLECTED)</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size: 14px; color: var(--text-muted); margin-top: 12px;">
+        <em>Retention Policy:</em> We do not retain any backups or archives of deleted accounts. Requests submitted by email are processed and confirmed within <strong>48 business hours</strong>.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="https://play.google.com/store/apps/details?id=com.my.smart" target="_blank">Google Play</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="delete-user-data.html">Delete User Data</a>
+      <a href="mailto:android7392@protonmail.com">Contact Support</a>
+    </div>
+    <p>© 2026 Priyanshu Raj. SmartAlphaX — All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
