@@ -510,4 +510,1672 @@
 
         .info-table th {
             text-align: left;
-            color: #445
+            color: #44516d;
+            background: #f5f7fc;
+            font-weight: 800;
+            padding: 13px 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-table td {
+            padding: 13px 15px;
+            color: #58647c;
+            vertical-align: top;
+            border-bottom: 1px solid #edf0f6;
+            overflow-wrap: anywhere;
+        }
+
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .info-table td:first-child {
+            color: #26334f;
+            font-weight: 650;
+        }
+
+        .callout {
+            border-left: 4px solid var(--primary);
+            background: #f6f5ff;
+            padding: 15px 17px;
+            border-radius: 0 12px 12px 0;
+            margin: 17px 0;
+        }
+
+        .callout p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #121d40, #263a73);
+            color: white;
+            padding: 23px;
+            border-radius: 16px;
+            margin-top: 18px;
+        }
+
+        .contact-card h3 {
+            color: white;
+            font-size: 18px;
+            margin: 0 0 8px;
+        }
+
+        .contact-card p {
+            color: #d3dcf6;
+            font-size: 13px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            color: white;
+            font-weight: 750;
+            overflow-wrap: anywhere;
+        }
+
+        .footer {
+            background: #101936;
+            color: #b9c4df;
+            padding: 37px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1180px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            color: white;
+            font-weight: 800;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .footer-copy {
+            font-size: 12px;
+            color: #aab6d4;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .footer-links a {
+            color: #d0d9ef;
+            font-size: 12px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 43px;
+            height: 43px;
+            border: none;
+            border-radius: 14px;
+            background: var(--primary);
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(81,69,229,0.3);
+            z-index: 50;
+        }
+
+        .back-to-top:hover {
+            background: #4035cb;
+        }
+
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .toc {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 2px 8px;
+            }
+
+            .highlights {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav {
+                padding: 11px 15px;
+                min-height: 67px;
+            }
+
+            .brand-icon {
+                width: 39px;
+                height: 39px;
+            }
+
+            .brand-name {
+                font-size: 15px;
+            }
+
+            .brand-subtitle {
+                font-size: 9px;
+            }
+
+            .nav-actions {
+                gap: 6px;
+            }
+
+            .nav-link {
+                padding: 9px 10px;
+                font-size: 11px;
+            }
+
+            .nav-link.back-home {
+                display: none;
+            }
+
+            .hero-inner {
+                padding: 45px 19px 65px;
+            }
+
+            .back-link {
+                margin-bottom: 25px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+                letter-spacing: -1.1px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .hero-meta {
+                gap: 7px;
+            }
+
+            .meta-pill {
+                font-size: 11px;
+            }
+
+            .container {
+                padding: 0 14px 42px;
+                margin-top: -25px;
+            }
+
+            .highlights {
+                grid-template-columns: 1fr;
+                gap: 11px;
+            }
+
+            .highlight-card {
+                padding: 19px;
+            }
+
+            .highlight-icon {
+                margin-bottom: 10px;
+            }
+
+            .notice {
+                padding: 16px;
+            }
+
+            .sidebar {
+                padding: 16px 11px;
+            }
+
+            .toc {
+                grid-template-columns: 1fr;
+            }
+
+            .policy-section {
+                padding: 21px 17px;
+                border-radius: 17px;
+                margin-bottom: 14px;
+            }
+
+            .section-heading {
+                gap: 11px;
+            }
+
+            .section-heading h2 {
+                font-size: 18px;
+            }
+
+            .section-number {
+                width: 35px;
+                height: 35px;
+                border-radius: 10px;
+            }
+
+            .policy-section p,
+            .policy-section li {
+                font-size: 13px;
+            }
+
+            .footer-inner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .back-to-top {
+                bottom: 14px;
+                right: 14px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .topbar,
+            .sidebar,
+            .back-to-top,
+            .back-link,
+            .footer-links {
+                display: none !important;
+            }
+
+            .hero {
+                background: white;
+                color: black;
+            }
+
+            .hero-inner {
+                padding: 20px 0;
+            }
+
+            .hero h1,
+            .hero h1 span,
+            .hero-description,
+            .meta-pill {
+                color: black;
+            }
+
+            .container {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .layout {
+                display: block;
+            }
+
+            .highlights {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .policy-section,
+            .highlight-card {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            .footer {
+                background: white;
+                color: black;
+                padding: 15px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar" id="top">
+
+    <nav class="nav" aria-label="Main navigation">
+
+        <a class="brand" href="./" aria-label="SmartAlphaX homepage">
+
+            <div class="brand-icon" aria-hidden="true">🚀</div>
+
+            <div>
+                <div class="brand-name">SmartAlphaX</div>
+                <div class="brand-subtitle">Learning App</div>
+            </div>
+
+        </a>
+
+        <div class="nav-actions">
+
+            <a class="nav-link back-home" href="./">
+                ← Website
+            </a>
+
+            <a class="nav-link primary"
+               href="https://play.google.com/store/apps/details?id=com.my.smart"
+               target="_blank"
+               rel="noopener noreferrer">
+                Get the App ↗
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <a class="back-link" href="./">
+            ← Back to SmartAlphaX Website
+        </a>
+
+        <div class="eyebrow">
+            <span aria-hidden="true">🛡️</span>
+            OFFICIAL PRIVACY POLICY
+        </div>
+
+        <h1>
+            Privacy Policy for
+            <span>SmartAlphaX</span>
+        </h1>
+
+        <p class="hero-description">
+            SmartAlphaX — Learning App is committed to protecting
+            children's privacy and providing parents with transparency
+            and control over personal data, subject to applicable law.
+            This policy explains our information practices, educational
+            features, cloud services, advertising and data deletion options.
+        </p>
+
+        <div class="hero-meta">
+
+            <div class="meta-pill">
+                <strong>Package:</strong> com.my.smart
+            </div>
+
+            <div class="meta-pill">
+                <strong>Effective:</strong> October 2026
+            </div>
+
+            <div class="meta-pill">
+                <strong>Version:</strong> 1.0
+            </div>
+
+            <div class="meta-pill">
+                <strong>Developer:</strong> Priyanshu Raj
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<main class="container">
+
+    <section class="highlights" aria-label="Privacy highlights">
+
+        <article class="highlight-card">
+
+            <div class="highlight-icon icon-purple"
+                 aria-hidden="true">🛡️</div>
+
+            <h3>Child Privacy & Safety</h3>
+
+            <p>
+                We aim to minimize children's personal data collection
+                and support age-appropriate educational experiences.
+                Our actual data practices are described below.
+            </p>
+
+        </article>
+
+
+        <article class="highlight-card">
+
+            <div class="highlight-icon icon-green"
+                 aria-hidden="true">📱</div>
+
+            <h3>On-Device Learning</h3>
+
+            <p>
+                Learning activities and progress may be stored locally
+                using the Android Room database. Cloud synchronization
+                is a separate feature where enabled.
+            </p>
+
+        </article>
+
+
+        <article class="highlight-card">
+
+            <div class="highlight-icon icon-orange"
+                 aria-hidden="true">👨‍👩‍👧</div>
+
+            <h3>Parent Control</h3>
+
+            <p>
+                Parents can contact us about their data, withdraw consent
+                where applicable, and request account and associated
+                cloud-data deletion.
+            </p>
+
+        </article>
+
+    </section>
+
+
+    <div class="notice">
+
+        <div class="notice-icon" aria-hidden="true">ℹ️</div>
+
+        <div>
+            <h3>Important information for parents and guardians</h3>
+
+            <p>
+                Please read this policy before enabling account-based
+                features. The information collected can depend on the
+                features you use, the permissions you grant, and the
+                services integrated into the app.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-title">On this page</div>
+
+            <ol class="toc">
+
+                <li>
+                    <a href="#section-1">
+                        <span class="toc-number">01</span>
+                        <span>Overview & Developer Details</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#section-2">
+                        <span class="toc-number">02</span>
+                        <span>Children's Privacy</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#section-3">
+                        <span class="toc-number">03</span>
+                        <span>Information We Collect</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#section-4">
+                        <span class="toc-number">04</span>
+                        <span>Cookies & Tracking</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#section-5">
+                        <span class="toc-number">05</span>
+                        <span>Advertising & Families Policy</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#section-6">
+                        <span class="toc-number">06</span>
+                        <span>Third-Party Providers</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#section-7">
+                        <span class="toc-number">07</span>
+                        <span>Retention & Account Deletion</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#section-8">
+                        <span class="toc-number">08</span>
+                        <span>Parental Rights</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#section-9">
+                        <span class="toc-number">09</span>
+                        <span>Security Safeguards</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#section-10">
+                        <span class="toc-number">10</span>
+                        <span>Grievance & Contact</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#section-11">
+                        <span class="toc-number">11</span>
+                        <span>Policy Changes</span>
+                    </a>
+                </li>
+
+            </ol>
+
+        </aside>
+
+
+        <div class="policy-content">
+
+
+            <!-- SECTION 1 -->
+
+            <section class="policy-section" id="section-1">
+
+                <div class="section-heading">
+
+                    <div class="section-number">01</div>
+
+                    <div>
+                        <h2>Data Fiduciary & App Overview</h2>
+
+                        <div class="section-description">
+                            Who operates SmartAlphaX?
+                        </div>
+                    </div>
+
+                </div>
+
+                <p>
+                    This Privacy Policy explains how SmartAlphaX —
+                    Learning App (referred to as "SmartAlphaX", "the App",
+                    "we", "us" or "our") collects, uses, stores,
+                    discloses and protects information when you use
+                    the application and its related services.
+                </p>
+
+                <div class="info-table-wrap">
+
+                    <table class="info-table">
+
+                        <tbody>
+
+                            <tr>
+                                <td>Application Name</td>
+                                <td>SmartAlphaX — Learning App</td>
+                            </tr>
+
+                            <tr>
+                                <td>Android Package</td>
+                                <td>com.my.smart</td>
+                            </tr>
+
+                            <tr>
+                                <td>Developer / Data Fiduciary</td>
+                                <td>Priyanshu Raj</td>
+                            </tr>
+
+                            <tr>
+                                <td>Support & Privacy Email</td>
+                                <td>
+                                    <a href="mailto:android7392@protonmail.com">
+                                        android7392@protonmail.com
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Primary Jurisdiction</td>
+                                <td>Republic of India</td>
+                            </tr>
+
+                            <tr>
+                                <td>Effective Date</td>
+                                <td>October 2026</td>
+                            </tr>
+
+                            <tr>
+                                <td>Policy Version</td>
+                                <td>1.0</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p>
+                    SmartAlphaX provides educational activities for
+                    young learners, including alphabet learning,
+                    numbers, phonics, tracing and quizzes.
+                </p>
+
+                <p>
+                    This policy should be read together with the
+                    permissions, disclosures and notices presented
+                    within the App.
+                </p>
+
+            </section>
+
+
+
+            <!-- SECTION 2 -->
+
+            <section class="policy-section" id="section-2">
+
+                <div class="section-heading">
+
+                    <div class="section-number">02</div>
+
+                    <div>
+                        <h2>Children's Privacy & Safety</h2>
+
+                        <div class="section-description">
+                            Privacy protections for young learners
+                        </div>
+                    </div>
+
+                </div>
+
+                <p>
+                    SmartAlphaX is designed for young learners,
+                    including preschool and primary-school children.
+                    We aim to minimize the collection and processing
+                    of children's personal information and to comply
+                    with applicable child privacy laws and platform
+                    requirements.
+                </p>
+
+                <h3>Drawing and tracing activities</h3>
+
+                <p>
+                    Drawing and tracing strokes are processed on the
+                    device for educational interaction. Under the
+                    intended local-learning design, these strokes are
+                    not uploaded to our servers.
+                </p>
+
+                <h3>Voice and microphone</h3>
+
+                <p>
+                    The App may provide text-to-speech (TTS)
+                    pronunciation for letters and numbers. Text-to-speech
+                    is different from recording a child's voice.
+                    The App is not intended to record or upload a
+                    child's voice for these pronunciation activities.
+                </p>
+
+                <h3>Camera and facial recognition</h3>
+
+                <p>
+                    The App's described learning experience does not
+                    require facial recognition. Child avatars may use
+                    pre-rendered cartoon illustrations or emojis.
+                    Any future camera-related feature would require
+                    an appropriate review and an updated disclosure.
+                </p>
+
+                <h3>Social features</h3>
+
+                <p>
+                    SmartAlphaX is intended for individual learning
+                    rather than public social networking. We do not
+                    provide public forums or open child-to-child chat
+                    as part of the described core learning experience.
+                </p>
+
+                <div class="callout">
+
+                    <p>
+                        <strong>Parents and guardians:</strong>
+                        Please supervise children's use of online
+                        features and contact us if you believe that
+                        personal information has been collected
+                        inappropriately.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SECTION 3 -->
+
+            <section class="policy-section" id="section-3">
+
+                <div class="section-heading">
+
+                    <div class="section-number">03</div>
+
+                    <div>
+                        <h2>Information We Collect & Lawful Basis</h2>
+
+                        <div class="section-description">
+                            Local storage, account information and cloud sync
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3>A. Local on-device storage</h3>
+
+                <p>
+                    SmartAlphaX may use the Android Room persistence
+                    library, backed by SQLite, to store educational
+                    information on the device.
+                </p>
+
+                <p>Depending on the features used, local data may include:</p>
+
+                <ul>
+                    <li>Completed alphabet and phonics activities.</li>
+                    <li>Quiz scores and educational progress.</li>
+                    <li>Math tables and completed learning activities.</li>
+                    <li>Stars, coins, streak counts and other learning indicators.</li>
+                    <li>Locally saved learning preferences or child profiles, where implemented.</li>
+                </ul>
+
+                <p>
+                    Locally stored information may remain on the device
+                    until it is cleared within the App, removed through
+                    an available reset function, or deleted through
+                    applicable device-level actions.
+                </p>
+
+                <h3>B. Optional parent account and Firebase</h3>
+
+                <p>
+                    If account creation and cloud synchronization are
+                    enabled and used, the following information may
+                    be processed:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Email address:</strong>
+                        used for account authentication.
+                    </li>
+
+                    <li>
+                        <strong>Firebase user ID (UID):</strong>
+                        used to associate an authenticated account
+                        with its cloud records.
+                    </li>
+
+                    <li>
+                        <strong>Educational progress:</strong>
+                        information synchronized to the account's
+                        associated database records.
+                    </li>
+                </ul>
+
+                <p>
+                    Firebase Authentication handles password
+                    authentication. The App is not intended to store
+                    a user's password as readable plaintext in its
+                    educational database.
+                </p>
+
+                <p>
+                    Cloud progress is intended to be stored under
+                    the authenticated user's database path, such as
+                    <code>/users/{uid}/</code>, where that structure
+                    is implemented.
+                </p>
+
+                <p>
+                    Firebase Realtime Database security rules must
+                    be configured and tested to restrict each user
+                    to the records they are authorized to access.
+                </p>
+
+                <h3>C. Purposes of processing</h3>
+
+                <ul>
+                    <li>Providing educational activities and progress tracking.</li>
+                    <li>Authenticating parent accounts, where enabled.</li>
+                    <li>Synchronizing learning progress across supported devices.</li>
+                    <li>Responding to support requests and privacy inquiries.</li>
+                    <li>Maintaining security and preventing unauthorized access.</li>
+                </ul>
+
+                <h3>D. Consent and applicable legal requirements</h3>
+
+                <p>
+                    Where applicable law requires verifiable parental
+                    consent or other authorization before processing
+                    a child's personal data, the required process must
+                    be completed before that processing begins.
+                </p>
+
+                <p>
+                    We aim to process personal data only for specified
+                    purposes and to limit it to what is reasonably
+                    necessary for the relevant service, subject to
+                    applicable legal obligations.
+                </p>
+
+                <p>
+                    India's Digital Personal Data Protection Act,
+                    2023, and its applicable rules and commencement
+                    provisions are relevant to our privacy practices.
+                    The specific obligations applicable to a service
+                    depend on the law in force and the circumstances
+                    of the processing.
+                </p>
+
+            </section>
+
+
+
+            <!-- SECTION 4 -->
+
+            <section class="policy-section" id="section-4">
+
+                <div class="section-heading">
+
+                    <div class="section-number">04</div>
+
+                    <div>
+                        <h2>Cookies & Tracking Technologies</h2>
+
+                        <div class="section-description">
+                            How the App handles tracking technologies
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3>Browser cookies</h3>
+
+                <p>
+                    The native Android application is not designed to
+                    use browser cookies for its core learning activities.
+                    This statement does not automatically cover every
+                    external website or third-party SDK that may be
+                    opened or integrated through the App.
+                </p>
+
+                <h3>Embedded legal and help documents</h3>
+
+                <p>
+                    Where legal or help documents are bundled within
+                    the Android application and displayed from local
+                    assets, those documents can be accessed without
+                    requiring a remote website.
+                </p>
+
+                <p>
+                    External links, online content and integrated
+                    service providers may process technical information
+                    under their own configurations and privacy policies.
+                </p>
+
+                <h3>Third-party SDKs</h3>
+
+                <p>
+                    Advertising, analytics, authentication and other
+                    SDKs may use technical identifiers or collect
+                    certain device or diagnostic information, depending
+                    on the SDK, its configuration and applicable law.
+                    See Section 6 for information about our providers.
+                </p>
+
+            </section>
+
+
+
+            <!-- SECTION 5 -->
+
+            <section class="policy-section" id="section-5">
+
+                <div class="section-heading">
+
+                    <div class="section-number">05</div>
+
+                    <div>
+                        <h2>Advertising & Google Play Families</h2>
+
+                        <div class="section-description">
+                            Child-directed advertising and ad disclosures
+                        </div>
+                    </div>
+
+                </div>
+
+                <p>
+                    SmartAlphaX may display advertisements through
+                    Google Mobile Ads (AdMob). Advertising is subject
+                    to the configuration of the published app,
+                    applicable Google policies and applicable law.
+                </p>
+
+                <h3>Child-directed advertising</h3>
+
+                <p>
+                    Where required, advertising requests are intended
+                    to use appropriate child-directed treatment,
+                    non-personalized advertising settings and a
+                    maximum permitted ad content rating suitable
+                    for the intended audience.
+                </p>
+
+                <p>
+                    These settings may include Google's
+                    child-directed treatment and non-personalized
+                    advertising request parameters, where applicable.
+                    The actual request configuration must be verified
+                    in the released app.
+                </p>
+
+                <h3>Advertising identifiers</h3>
+
+                <p>
+                    The use of advertising identifiers and related
+                    measurement technologies depends on the app's
+                    manifest, SDK dependencies, SDK behavior and
+                    applicable platform requirements.
+                </p>
+
+                <p>
+                    We aim to avoid unnecessary tracking of children
+                    and to configure advertising in accordance with
+                    the requirements applicable to child-directed apps.
+                </p>
+
+                <h3>Ad placement</h3>
+
+                <ul>
+                    <li>
+                        Advertisements should be distinguishable
+                        from educational content and interactive
+                        learning controls.
+                    </li>
+
+                    <li>
+                        Ads should not mislead children into
+                        accidentally clicking them.
+                    </li>
+
+                    <li>
+                        Advertising must comply with the Google Play
+                        Families Policy and applicable advertising rules.
+                    </li>
+                </ul>
+
+                <p>
+                    Please note that non-personalized advertising does
+                    not necessarily mean that an advertising SDK
+                    processes no data. Data processing depends on
+                    the services used and their configuration.
+                </p>
+
+            </section>
+
+
+
+            <!-- SECTION 6 -->
+
+            <section class="policy-section" id="section-6">
+
+                <div class="section-heading">
+
+                    <div class="section-number">06</div>
+
+                    <div>
+                        <h2>Third-Party Service Providers</h2>
+
+                        <div class="section-description">
+                            External services used by the application
+                        </div>
+                    </div>
+
+                </div>
+
+                <p>
+                    SmartAlphaX may rely on third-party providers
+                    to deliver account authentication, cloud storage,
+                    advertising and educational media.
+                </p>
+
+                <div class="info-table-wrap">
+
+                    <table class="info-table">
+
+                        <thead>
+                            <tr>
+                                <th>Provider</th>
+                                <th>Purpose</th>
+                                <th>Privacy considerations</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Google Firebase Authentication</td>
+
+                                <td>
+                                    Parent account authentication,
+                                    where enabled.
+                                </td>
+
+                                <td>
+                                    Processes authentication information
+                                    under the provider's service
+                                    configuration and applicable terms.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Firebase Realtime Database</td>
+
+                                <td>
+                                    Cloud storage and synchronization
+                                    of educational progress, where enabled.
+                                </td>
+
+                                <td>
+                                    Access depends on database security
+                                    rules, authentication and the
+                                    configured database.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Google Mobile Ads (AdMob)</td>
+
+                                <td>
+                                    Displaying advertisements, where enabled.
+                                </td>
+
+                                <td>
+                                    Data processing depends on the
+                                    advertising SDK, request settings,
+                                    consent requirements and applicable policies.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>YouTube</td>
+
+                                <td>
+                                    Streaming selected educational
+                                    videos, where integrated.
+                                </td>
+
+                                <td>
+                                    Online playback may involve Google's
+                                    services and their data practices.
+                                    External content is subject to
+                                    the provider's policies.
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p>
+                    Third-party providers may process information
+                    necessary to operate their services, prevent
+                    abuse, maintain security or comply with legal
+                    requirements.
+                </p>
+
+                <p>
+                    Their handling of data is also governed by their
+                    applicable service terms and privacy policies.
+                    Please review those policies when using
+                    integrated services.
+                </p>
+
+                <p>
+                    We aim to use third-party services in a manner
+                    consistent with the privacy and child-safety
+                    requirements applicable to SmartAlphaX.
+                </p>
+
+            </section>
+
+
+
+            <!-- SECTION 7 -->
+
+            <section class="policy-section" id="section-7">
+
+                <div class="section-heading">
+
+                    <div class="section-number">07</div>
+
+                    <div>
+                        <h2>Data Retention & Account Deletion</h2>
+
+                        <div class="section-description">
+                            Options for clearing learning records and accounts
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3>A. Resetting on-device learning progress</h3>
+
+                <p>
+                    Where the relevant feature is available, parents
+                    can use the in-app reset option to clear locally
+                    stored learning progress and child profiles.
+                    The exact data removed depends on the reset
+                    function implemented in the released version.
+                </p>
+
+                <h3>B. Deleting a cloud account</h3>
+
+                <p>
+                    Where account deletion is supported, parents
+                    can request deletion of their Firebase
+                    Authentication account and associated cloud
+                    progress through the available in-app deletion
+                    option or the external deletion-request page.
+                </p>
+
+                <p>
+                    Account deletion should remove the account's
+                    associated personal data held by us, subject
+                    to applicable legal retention requirements.
+                    Third-party providers may retain limited
+                    information where required or permitted by law.
+                </p>
+
+                <h3>C. Web account deletion instructions</h3>
+
+                <p>
+                    Visit the dedicated account and data deletion page:
+                </p>
+
+                <div class="callout">
+
+                    <p>
+                        <a href="https://priyanshu-appcreator.github.io/SmartAlphaX-/delete-user-data.html"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Open SmartAlphaX Account & Data Deletion Page ↗
+                        </a>
+                    </p>
+
+                </div>
+
+                <h3>D. Email deletion requests</h3>
+
+                <p>
+                    Parents and account holders may contact our
+                    support email to request account deletion or
+                    ask questions about personal data.
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:android7392@protonmail.com?subject=SmartAlphaX%20Account%20Deletion%20Request">
+                        android7392@protonmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Suggested subject:</strong>
+                    Account Deletion Request
+                </p>
+
+                <p>
+                    We aim to respond to deletion requests within
+                    48 business hours. This is a response target,
+                    not a guarantee that all deletion operations
+                    across every service will finish within that period.
+                    Identity verification may be necessary to protect
+                    accounts against unauthorized deletion requests.
+                </p>
+
+                <h3>E. Retention</h3>
+
+                <p>
+                    We aim to retain personal data only for as long
+                    as reasonably necessary for the stated purposes,
+                    unless a longer retention period is required
+                    or permitted by applicable law.
+                </p>
+
+            </section>
+
+
+
+            <!-- SECTION 8 -->
+
+            <section class="policy-section" id="section-8">
+
+                <div class="section-heading">
+
+                    <div class="section-number">08</div>
+
+                    <div>
+                        <h2>Parental & User Rights</h2>
+
+                        <div class="section-description">
+                            Requests concerning personal information
+                        </div>
+                    </div>
+
+                </div>
+
+                <p>
+                    Subject to applicable law, parents, guardians
+                    and other eligible data principals may have
+                    rights relating to personal information processed
+                    through SmartAlphaX.
+                </p>
+
+                <h3>Right to access information</h3>
+
+                <p>
+                    Eligible individuals may request information
+                    about the personal data associated with their
+                    account and how it is used, subject to
+                    applicable legal requirements.
+                </p>
+
+                <h3>Right to correction and erasure</h3>
+
+                <p>
+                    Eligible individuals may request correction,
+                    updating or deletion of personal data where
+                    those rights apply.
+                </p>
+
+                <h3>Right to withdraw consent</h3>
+
+                <p>
+                    Where processing relies on consent, that
+                    consent may be withdrawn through an available
+                    mechanism or by contacting us, subject to
+                    applicable law. Withdrawal may affect features
+                    that depend on the relevant processing.
+                </p>
+
+                <h3>Right to grievance redressal</h3>
+
+                <p>
+                    Users and parents may contact us with questions,
+                    complaints or concerns about privacy and
+                    personal-data handling.
+                </p>
+
+                <h3>Right to nominate</h3>
+
+                <p>
+                    Where applicable law provides a nomination
+                    right, eligible individuals may exercise that
+                    right in accordance with the prescribed
+                    requirements and procedures.
+                </p>
+
+                <div class="callout">
+
+                    <p>
+                        To exercise an applicable right, email
+                        <a href="mailto:android7392@protonmail.com">
+                            android7392@protonmail.com
+                        </a>
+                        and include enough information for us to
+                        understand your request. Do not send your
+                        password or other unnecessary sensitive
+                        information by email.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SECTION 9 -->
+
+            <section class="policy-section" id="section-9">
+
+                <div class="section-heading">
+
+                    <div class="section-number">09</div>
+
+                    <div>
+                        <h2>Information Security Safeguards</h2>
+
+                        <div class="section-description">
+                            Protecting account and learning information
+                        </div>
+                    </div>
+
+                </div>
+
+                <p>
+                    We aim to implement appropriate technical and
+                    organizational measures to protect personal
+                    data against unauthorized access, alteration,
+                    disclosure, loss or misuse.
+                </p>
+
+                <h3>Network security</h3>
+
+                <p>
+                    Network communications with Firebase and other
+                    online services should use secure encrypted
+                    connections as supported and required by the
+                    relevant service and platform.
+                </p>
+
+                <h3>Authentication</h3>
+
+                <p>
+                    Account authentication is handled through
+                    Firebase Authentication where that service
+                    is enabled. Authentication credentials and
+                    tokens should be handled according to the
+                    relevant SDK security practices.
+                </p>
+
+                <h3>Database access</h3>
+
+                <p>
+                    Cloud database security rules should restrict
+                    access to authenticated users and authorize
+                    access only to the records they are permitted
+                    to access.
+                </p>
+
+                <h3>Parental controls</h3>
+
+                <p>
+                    Where implemented, a parent gate or PIN can
+                    help prevent children from accidentally
+                    accessing administrative actions and settings.
+                    A parent gate is an additional safeguard,
+                    not a replacement for secure account access
+                    and backend authorization.
+                </p>
+
+                <h3>Limitations</h3>
+
+                <p>
+                    No electronic storage or transmission system
+                    can be guaranteed completely secure. Security
+                    measures must be maintained, tested and
+                    updated as the App and its dependencies change.
+                </p>
+
+            </section>
+
+
+
+            <!-- SECTION 10 -->
+
+            <section class="policy-section" id="section-10">
+
+                <div class="section-heading">
+
+                    <div class="section-number">10</div>
+
+                    <div>
+                        <h2>Grievance Redressal & Contact</h2>
+
+                        <div class="section-description">
+                            Contact us about privacy or account issues
+                        </div>
+                    </div>
+
+                </div>
+
+                <p>
+                    If you have questions, complaints or concerns
+                    about this Privacy Policy, children's privacy,
+                    account information or a data deletion request,
+                    you can contact the developer using the details
+                    below.
+                </p>
+
+                <div class="info-table-wrap">
+
+                    <table class="info-table">
+
+                        <tbody>
+
+                            <tr>
+                                <td>Developer</td>
+                                <td>Priyanshu Raj</td>
+                            </tr>
+
+                            <tr>
+                                <td>App</td>
+                                <td>SmartAlphaX — Learning App</td>
+                            </tr>
+
+                            <tr>
+                                <td>Package Name</td>
+                                <td>com.my.smart</td>
+                            </tr>
+
+                            <tr>
+                                <td>Country</td>
+                                <td>India</td>
+                            </tr>
+
+                            <tr>
+                                <td>Privacy Contact</td>
+                                <td>
+                                    <a href="mailto:android7392@protonmail.com">
+                                        android7392@protonmail.com
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Target Response Time</td>
+                                <td>Within 48 business hours</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="contact-card">
+
+                    <h3>Need help with your privacy?</h3>
+
+                    <p>
+                        Contact the SmartAlphaX developer for
+                        account deletion, personal-data inquiries,
+                        privacy concerns or other support requests.
+                    </p>
+
+                    <a class="contact-email"
+                       href="mailto:android7392@protonmail.com">
+                        android7392@protonmail.com ↗
+                    </a>
+
+                </div>
+
+                <p style="margin-top: 18px;">
+                    Any formal grievance-officer designation,
+                    statutory notice, response deadline or
+                    compliance statement should be maintained
+                    in accordance with the legal requirements
+                    actually applicable to the service.
+                </p>
+
+            </section>
+
+
+
+            <!-- SECTION 11 -->
+
+            <section class="policy-section" id="section-11">
+
+                <div class="section-heading">
+
+                    <div class="section-number">11</div>
+
+                    <div>
+                        <h2>Changes to This Privacy Policy</h2>
+
+                        <div class="section-description">
+                            Keeping this document accurate and current
+                        </div>
+                    </div>
+
+                </div>
+
+                <p>
+                    We may update this Privacy Policy to reflect
+                    changes in the App's features, service providers,
+                    data-handling practices, security measures
+                    or applicable legal requirements.
+                </p>
+
+                <p>
+                    When the policy changes, we will update the
+                    version and effective date displayed on this page.
+                </p>
+
+                <p>
+                    Where required by applicable law or platform
+                    policy, we will provide an appropriate notice
+                    and obtain any additional consent that is
+                    legally necessary before carrying out the
+                    relevant processing.
+                </p>
+
+                <p>
+                    We encourage parents and guardians to review
+                    this page periodically to stay informed about
+                    our privacy practices.
+                </p>
+
+                <div class="callout">
+
+                    <p>
+                        <strong>Current version:</strong> 1.0
+                        <br>
+
+                        <strong>Effective date:</strong>
+                        October 2026
+                        <br>
+
+                        <strong>Application:</strong>
+                        SmartAlphaX — Learning App
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div>
+
+            <div class="footer-brand">
+                🚀 SmartAlphaX — Learning App
+            </div>
+
+            <p class="footer-copy">
+                © 2026 Priyanshu Raj. All rights reserved.
+            </p>
+
+            <p class="footer-copy">
+                Designed for safe, joyful learning.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="./">Official Website</a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.my.smart"
+               target="_blank"
+               rel="noopener noreferrer">
+                Google Play
+            </a>
+
+            <a href="https://priyanshu-appcreator.github.io/SmartAlphaX-/delete-user-data.html">
+                Delete Account & Data
+            </a>
+
+            <a href="mailto:android7392@protonmail.com">
+                Contact Support
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<button class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top"
+        title="Back to top"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    ↑
+</button>
+
+
+<script>
+    // Display the back-to-top button after scrolling.
+    (function () {
+        const button = document.getElementById("backToTop");
+
+        function updateButton() {
+            button.style.display =
+                window.scrollY > 350 ? "grid" : "none";
+        }
+
+        window.addEventListener("scroll", updateButton, {
+            passive: true
+        });
+
+        updateButton();
+    })();
+</script>
+
+</body>
+</html>
